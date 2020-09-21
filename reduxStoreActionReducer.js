@@ -30,9 +30,23 @@ const createTask = (taskMessage) => {
   }
 }
 
+const deleteTask = (taskId) => {
+  return {
+    type: DELETE_TASK,
+    taskId,
+  };
+};
+
 const resetTaskList = () => {
   return {
     type: RESET_TASK_LIST,
     emptyTaskList: [],
   };
+};
+
+module.exports = {
+  store,
+  createTask,
+  deleteTask,
+  resetTaskList,
 };
